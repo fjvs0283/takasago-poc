@@ -1,0 +1,32 @@
+{
+  "title": "Google Search Scraper input",
+  "description": "Specify Google Search queries or full URLs. Beware that the additional settings such as Country, Language, or UULE location code only apply to the search queries, but not the URLs.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "queries": {
+      "title": "Search queries or URLs",
+      "type": "string",
+      "description": "Google Search queries (e.g. <code>food in NYC</code>) and/or full URLs (e.g. <code>https://www.google.com/search?q=food+NYC</code>).<br><br>Enter one item per line.",
+      "prefill": "Hotels in NYC\nRestaurants in NYC\nhttps://www.google.com/search?q=restaurants+in+NYC",
+      "editor": "textarea",
+      "pattern": "[^\\s]+"
+    },
+    "resultsPerPage": {
+      "title": "Results per page",
+      "type": "integer",
+      "description": "Number of search results per page. By default, Google Search returns 10 results. The allowed values are: <code>10</code>, <code>20</code>, <code>30</code>, <code>40</code>, <code>50</code> and <code>100</code>.<br><br>This setting only applies to <strong>Search queries</strong>, but not to <strong>URLs</strong>.",
+      "maximum": 100,
+      "minimum": 1
+    },
+    "maxPagesPerQuery": {
+      "title": "Max pages per query",
+      "type": "integer",
+      "description": "The maximum number of search result pages crawled for each search query or URL. Note that a value greater than one might significantly slow down the actor.",
+      "default": 1,
+      "minimum": 1
+    }
+  },
+  "required": [
+  ]
+}
