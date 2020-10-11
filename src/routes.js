@@ -1,4 +1,5 @@
 const Apify = require('apify');
+const dataset = await Apify.openDataset();
 const url = require('url');
 const { utils: { log } } = Apify;
 const { createSerpRequest, extractOrganicResults, extractTotalResults } = require('./tools');
@@ -7,7 +8,7 @@ exports.handleStart = async ({ request, $ }) => {
     // Handle Start URLs
 };
 
-exports.handleList = async ({ request, $, maxPagesPerQuery, dataset }) => {
+exports.handleList = async ({ request, $, maxPagesPerQuery }) => {
 
     request.userData.finishedAt = new Date();
     const nonzeroPage = request.userData.page + 1; // Display same page numbers as Google, i.e. 1, 2, 3..

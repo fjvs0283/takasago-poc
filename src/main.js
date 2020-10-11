@@ -11,7 +11,6 @@ Apify.main(async () => {
     const initialRequests = getInitialRequests(input);
     const requestList = await Apify.openRequestList('initial-requests', initialRequests);
     const requestQueue = await Apify.openRequestQueue();
-    const dataset = await Apify.openDataset();
 
     const { maxPagesPerQuery } = input;
 
@@ -38,7 +37,7 @@ Apify.main(async () => {
             
             switch (label) {
                 case 'LIST':
-                    return handleList(context, maxPagesPerQuery, dataset);
+                    return handleList(context, maxPagesPerQuery);
                 case 'DETAIL':
                     return handleDetail(context);
                 default:
