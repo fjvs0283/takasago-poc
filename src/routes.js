@@ -3,7 +3,7 @@ const url = require('url');
 const { utils: { log } } = Apify;
 const { createSerpRequest, extractOrganicResults, extractTotalResults } = require('./tools');
 
-const domain = 'google.com';
+
 
 
 exports.handleStart = async ({ request, $ }) => {
@@ -17,7 +17,11 @@ exports.handleList = async ({ request, $ }) => {
     const parsedUrl = url.parse(request.url, true);
 
     // We know the URL matches (otherwise we have a bug here)
-    const matches = new RegExp(`^(http|https)://(www.){0,1}((${domain.join(')|(')}))/search?.*$`, 'i').exec(request.url);
+    const DOMAIN = 'google.com';
+    GOOGLE_SEARCH_URL_REGEX = new RegExp(`^(http|https)://(www.){0,1}((${DOMAIN.join(')|(')}))/search?.*$`, 'i');
+    const matches = GOOGLE_SEARCH_URL_REGEX.exec(request.url);
+    const domain = matches[3].toLowerCase();
+
     const resultsPerPage = 10;
     const { host } = parsedUrl;
 
@@ -27,6 +31,7 @@ exports.handleList = async ({ request, $ }) => {
             term: parsedUrl.query.q,
             page: nonzeroPage,
             resultsPerPage,
+            domain,
         },
         url: request.url,
         hasNextPage: false,
