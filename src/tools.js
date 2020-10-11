@@ -20,7 +20,7 @@ exports.createSerpRequest = (url, page) => {
   return {
     url,
     userData: {
-      label: LabelTypes.LIST,
+      label: 'LIST',
       page,
     },
   };
