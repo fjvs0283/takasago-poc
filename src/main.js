@@ -13,11 +13,12 @@ Apify.main(async () => {
     const requestQueue = await Apify.openRequestQueue();
     const dataset = await Apify.openDataset();
 
+    const { maxPagesPerQuery } = input;
+
     const crawler = new Apify.CheerioCrawler({
         requestList,
         requestQueue,
         proxyConfiguration,
-        maxPagesPerQuery,
 
         prepareRequestFunction: ({ request }) => {
             const parsedUrl = url.parse(request.url, true);
