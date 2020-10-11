@@ -1,3 +1,5 @@
+const queryString = require('query-string');
+
 exports.getInitialRequests = ({ queries }) => {
   return queries
     .split("\n")
