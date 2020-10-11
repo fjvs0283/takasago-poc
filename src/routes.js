@@ -50,7 +50,6 @@ exports.handleList = async ({ request, $, maxPagesPerQuery }) => {
             await requestQueue.addRequest(createSerpRequest(nextPageHref, request.userData.page + 1));
         } 
     }
-    await dataset.pushData(data);
 };
 
 exports.handleDetail = async ({ request, $ }) => {
