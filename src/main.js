@@ -17,6 +17,7 @@ Apify.main(async () => {
         requestList,
         requestQueue,
         proxyConfiguration,
+        maxPagesPerQuery,
 
         prepareRequestFunction: ({ request }) => {
             const parsedUrl = url.parse(request.url, true);

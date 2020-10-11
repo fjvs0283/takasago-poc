@@ -1,0 +1,23 @@
+{
+    "id": "bmOcUGss0i7QCbI",
+    "url": "http://www.google.com/search?q=Restaurants%20in%20NYC",
+    "loadedUrl": "http://www.google.com/search?q=Restaurants%20in%20NYC",
+    "uniqueKey": "http://www.google.com/search?q=Restaurants%20in%20NYC",
+    "method": "GET",
+    "noRetry": false,
+    "retryCount": 3,
+    "errorMessages": [
+        "ReferenceError: maxPagesPerQuery is not defined\n    at exports.handleList (/Users/franciscovillarreal/Documents/GitHub/takasago-poc/src/routes.js:41:37)\n    at CheerioCrawler.handlePageFunction (/Users/franciscovillarreal/Documents/GitHub/takasago-poc/src/main.js:39:28)\n    at CheerioCrawler._handleRequestFunction (/Users/franciscovillarreal/Documents/GitHub/takasago-poc/node_modules/apify/build/crawlers/cheerio_crawler.js:451:49)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n    at async /Users/franciscovillarreal/Documents/GitHub/takasago-poc/node_modules/apify/build/utils.js:362:26",
+        "ReferenceError: maxPagesPerQuery is not defined\n    at exports.handleList (/Users/franciscovillarreal/Documents/GitHub/takasago-poc/src/routes.js:41:37)\n    at CheerioCrawler.handlePageFunction (/Users/franciscovillarreal/Documents/GitHub/takasago-poc/src/main.js:39:28)\n    at CheerioCrawler._handleRequestFunction (/Users/franciscovillarreal/Documents/GitHub/takasago-poc/node_modules/apify/build/crawlers/cheerio_crawler.js:451:49)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n    at async /Users/franciscovillarreal/Documents/GitHub/takasago-poc/node_modules/apify/build/utils.js:362:26",
+        "ReferenceError: maxPagesPerQuery is not defined\n    at exports.handleList (/Users/franciscovillarreal/Documents/GitHub/takasago-poc/src/routes.js:41:37)\n    at CheerioCrawler.handlePageFunction (/Users/franciscovillarreal/Documents/GitHub/takasago-poc/src/main.js:39:28)\n    at CheerioCrawler._handleRequestFunction (/Users/franciscovillarreal/Documents/GitHub/takasago-poc/node_modules/apify/build/crawlers/cheerio_crawler.js:451:49)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n    at async /Users/franciscovillarreal/Documents/GitHub/takasago-poc/node_modules/apify/build/utils.js:362:26",
+        "ReferenceError: maxPagesPerQuery is not defined\n    at exports.handleList (/Users/franciscovillarreal/Documents/GitHub/takasago-poc/src/routes.js:41:37)\n    at CheerioCrawler.handlePageFunction (/Users/franciscovillarreal/Documents/GitHub/takasago-poc/src/main.js:39:28)\n    at CheerioCrawler._handleRequestFunction (/Users/franciscovillarreal/Documents/GitHub/takasago-poc/node_modules/apify/build/crawlers/cheerio_crawler.js:451:49)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n    at async /Users/franciscovillarreal/Documents/GitHub/takasago-poc/node_modules/apify/build/utils.js:362:26"
+    ],
+    "headers": {},
+    "userData": {
+        "label": "LIST",
+        "page": 0,
+        "startedAt": "2020-10-11T20:17:26.288Z",
+        "finishedAt": "2020-10-11T20:17:30.053Z"
+    },
+    "handledAt": "2020-10-11T20:17:30.069Z"
+}
