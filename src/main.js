@@ -17,7 +17,6 @@ Apify.main(async () => {
         requestList,
         requestQueue,
         proxyConfiguration,
-        maxConcurrency,
 
         prepareRequestFunction: ({ request }) => {
             const parsedUrl = url.parse(request.url, true);
