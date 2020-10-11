@@ -38,7 +38,7 @@ Apify.main(async () => {
             
             switch (label) {
                 case 'LIST':
-                    return handleList(context);
+                    return handleList(context, maxPagesPerQuery);
                 case 'DETAIL':
                     return handleDetail(context);
                 default:
