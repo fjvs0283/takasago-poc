@@ -1,7 +1,5 @@
 {
-  "startUrls": [
-    {
-      "url": "https://example.com"
-    }
-  ]
+  "queries": "Restaurants in NYC",
+  "resultsPerPage": 10,
+  "maxPagesPerQuery": 1
 }
