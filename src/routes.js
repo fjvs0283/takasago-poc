@@ -1,4 +1,5 @@
 const Apify = require('apify');
+const url = require('url');
 const { utils: { log } } = Apify;
 const { createSerpRequest, extractOrganicResults, extractTotalResults } = require('./tools');
 
