@@ -7,7 +7,7 @@ exports.handleStart = async ({ request, $ }) => {
     // Handle Start URLs
 };
 
-exports.handleList = async ({ request, $, maxPagesPerQuery }) => {
+exports.handleList = async ({ request, $, maxPagesPerQuery, dataset }) => {
 
     request.userData.finishedAt = new Date();
     const nonzeroPage = request.userData.page + 1; // Display same page numbers as Google, i.e. 1, 2, 3..
